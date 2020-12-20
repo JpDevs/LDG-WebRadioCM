@@ -44,8 +44,8 @@ $conlargura = $mysqli->query($consultalargura) or die ($mysqli->error);
 //------------------------------------------------------------------------------
 //PAINEL
 
-$exibeusuario = "SELECT login from usuarios where id=0000000001";
-$exibesenha = "SELECT senha from usuarios where id=0000000001";
+$exibeusuario = "SELECT login from usuarios where id=01";
+$exibesenha = "SELECT senha from usuarios where id=01";
 
 //--
 
