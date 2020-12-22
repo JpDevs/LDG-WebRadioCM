@@ -4,13 +4,17 @@
     A cópia desse site é ilegal e poderá acarretar meios judiciais
     Level Development Group
 -->
-
+<?php
+require('includes/config.php');
+require('includes/functions.php');
+$centovalogin = $concclogin->fetch_assoc();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rádio Level - Direto para o próximo nível da Diversão!</title>
+        <title><?php while($exibetitulo1 = $contitulo->fetch_array()){ echo $exibetitulo1["titulo"]; }?></title>
         <meta name="description" content="Diversão em qualquer lugar a qualquer hora">
         <meta name="keywords" content="Web rádio, Rádio Level, Radio Level, Rádio">
         <link rel="stylesheet" href="./css/style.css">
@@ -20,7 +24,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     
-    <body style="background: var(--cor-primaria) url('./img/bg.png') no-repeat;">
+    <body style="background: var(--cor-primaria) url('<?php while($showbg = $conbg->fetch_assoc()){ echo $showbg["background"];} ?>') no-repeat;">
         <!--Menu-->
         <div id="navbar" >
             <img src="./img/logo.png" alt="Rádio Level">
@@ -60,7 +64,7 @@
             <!--Player-->
             <!--Aqui você sabe no que mexer eu acho-->
             <div id="containerPlayer">
-                <audio src="http://192.99.4.205:8432/;" autoplay></audio>
+                <audio src="<?php while($tocaplayer = $consc->fetch_assoc()){ echo $tocaplayer["shoutcast_url"];} ?>"></audio>
                 <div id="box1">
                     <img class="cc_streaminfo" data-type="trackimageurl" data-username="radiole1" />
                     <div id="textBox">
@@ -70,7 +74,7 @@
                 </div>
 
                 <div id="audioButtons">
-                    <button id="buttonPP"><img id="imgPP" src="./img/icons/svg/pausa.svg"></button>
+                    <button id="buttonPP"><img id="imgPP" src="./img/icons/svg/botao-play.svg"></button>
                 </div>
             </div>
 
