@@ -133,6 +133,6 @@ $centovalogin = $concclogin->fetch_assoc();
         <script type="text/javascript" src="./js/player.js"></script>
         <script type="text/javascript" src="./js/console.js"></script>
         <script type="text/javascript" src="./js/sliderModal.js"></script>
-        <script language="javascript" type="text/javascript" src="http://centova.darkhost.com.br:2199/system/streaminfo.js"></script>
+        <script language="javascript" type="text/javascript" src="<?php while($exibecentova = $conccurl->fetch_array()){ echo $exibecentova["centova_url"];} ?>/system/streaminfo.js"></script>
     </body>
 </html>
