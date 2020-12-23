@@ -11,6 +11,8 @@ $consultacclogin = "SELECT centova_login FROM radio_settings WHERE id=01";
 //tabela imagens
 $consultaimg1 = "SELECT Img_URL FROM imagens WHERE id=0";
 $consultaimg2 = "SELECT Img_URL FROM imagens WHERE id=1";
+//redes sociais
+$consultatwitter = "SELECT Twitter FROM redes_sociais WHERE id=0";
 //---------------------------------------------------------------//
 //site_settings
 $contitulo = $mysqli->query($consultatitulo) or die ($mysqli->error);
@@ -20,6 +22,9 @@ $conbg = $mysqli->query($consultabg) or die ($mysqli->error);
 $consc = $mysqli->query($consultashoutcast) or die ($mysqli->error);
 $conccurl = $mysqli->query($consultacentova) or die ($mysqli->error);
 $concclogin = $mysqli->query($consultacclogin) or die ($mysqli->error);
+$concclogin2 = $mysqli->query($consultacclogin) or die ($mysqli->error);
 //imagens
 $conimg1 = $mysqli->query($consultaimg1) or die ($mysqli->error);
 $conimg2 = $mysqli->query($consultaimg2) or die ($mysqli->error);
+//redes sociais
+$contt = $mysqli->query($consultatwitter) or die ($mysqli->error);

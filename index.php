@@ -27,7 +27,7 @@ $centovalogin = $concclogin->fetch_assoc();
     <body style="background: var(--cor-primaria) url('<?php while($showbg = $conbg->fetch_assoc()){ echo $showbg["background"];} ?>') no-repeat;">
         <!--Menu-->
         <div id="navbar" >
-            <img src="./img/logo.png" alt="Rádio Level">
+            <img src="<?php while($exibelogo = $conlogo->fetch_assoc()){ echo $exibelogo["logo"];}?>" alt="Rádio Level">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a id="vagas">VAGAS</a></li>
@@ -50,26 +50,22 @@ $centovalogin = $concclogin->fetch_assoc();
                     <button><img src="./img/icons/svg/right-arrow.svg" data-js="carousel_button--next" id="rightArrow" alt=""></button>
                 </div>
 
-                <!--Quando for criar o while deixa um de fora com a class="carousel_item carousel_item--visible" pro js conseguir mostrar 1 banner já na tela-->
-
+                
                 <div data-js="carousel_item" class="carousel_item carousel_item--visible">
-                    <img src="./img/IMAGEM 5.png" class="imgCarousel" alt="">
+                    <img src="<?php while($exibeimg = $conimg1->fetch_assoc()){ echo $exibeimg["Img_URL"];} ?>" class="imgCarousel" alt="">
                 </div>
 
                 <div data-js="carousel_item" class="carousel_item">
-                    <img src="./img/IMAGEM 6.png" class="imgCarousel" alt="">
+                    <img src="<?php while($exibeimg2 = $conimg2->fetch_assoc()){ echo $exibeimg2["Img_URL"];} ?>" class="imgCarousel" alt="">
                 </div>
             </div>
-
-            <!--Player-->
-            <!--Aqui você sabe no que mexer eu acho-->
             <div id="containerPlayer">
-                <audio src="<?php while($tocaplayer = $consc->fetch_assoc()){ echo $tocaplayer["shoutcast_url"];} ?>"></audio>
+                <audio src="includes/streaming.php"></audio>
                 <div id="box1">
-                    <img class="cc_streaminfo" data-type="trackimageurl" data-username="radiole1" />
+                    <img class="cc_streaminfo" data-type="trackimageurl" data-username="<?php while($exibelogin = $concclogin2->fetch_array()){echo $exibelogin["centova_login"]; ?>" />
                     <div id="textBox">
-                        <span class="cc_streaminfo" data-type="title" data-username="radiole1"></span>
-                        <a href="#" class="cc_streaminfo" data-type="song" data-username="radiole1">Carregando ...</a>
+                        <span class="cc_streaminfo" data-type="title" data-username="<?php echo $exibelogin["centova_login"]; ?>"></span>
+                        <a href="#" class="cc_streaminfo" data-type="song" data-username="<?php echo $exibelogin["centova_login"]; } ?>">Carregando ...</a>
                     </div>
                 </div>
 
@@ -77,11 +73,8 @@ $centovalogin = $concclogin->fetch_assoc();
                     <button id="buttonPP"><img id="imgPP" src="./img/icons/svg/botao-play.svg"></button>
                 </div>
             </div>
-
-            <!--Twitter-->
-            <!--Mudar só o nome da conta-->
             <div id="containerTwitter">
-                <a class="twitter-timeline" data-lang="pt" data-height="480" data-theme="dark" href="https://twitter.com/radiolevel?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" data-lang="pt" data-height="480" data-theme="dark" href="https://twitter.com/<?php while($exibetwitter = $contt->fetch_assoc()){echo $exibetwitter["Twitter"];} ?>?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
 
@@ -90,17 +83,17 @@ $centovalogin = $concclogin->fetch_assoc();
             <div class="modal l-form">
                 <button id="btnFechar">X</button>
                 <h1 class="form_title">PEDIDOS</h1>
-                <form action="" method="POST">
+                <form action="song-request.php" method="POST">
                     <div class="form_div">
-                        <input type="text" class="form_input" placeholder="Digite seu nome aqui." id="nomePedidos">
+                        <input type="text" class="form_input" placeholder="Digite seu nome aqui." name="nomePedidos">
                     </div>
 
                     <div class="form_div">
-                        <input type="email" class="form_input" placeholder="Digite seu email aqui." id="emailPedidos">
+                        <input type="email" class="form_input" placeholder="Digite seu email aqui." name="emailPedidos">
                     </div>
 
                     <div class="form_div">
-                        <input type="textarea" class="form_input" placeholder="Peça sua música." id="musicaPedidos">
+                        <input type="textarea" class="form_input" placeholder="Peça sua música." name="musicaPedidos">
                     </div>
 
                     <button type="submit" class="form_button">Enviar</button>
@@ -112,20 +105,20 @@ $centovalogin = $concclogin->fetch_assoc();
             <div class="modal l-form">
                 <button id="btnFechar">X</button>
                 <h1 class="form_title">VAGAS ABERTAS</h1>
-                <form action="" method="POST">
+                <form action="vaga-request.php" method="POST">
                     <div class="form_div">
-                        <input type="text" class="form_input" placeholder="Digite seu nome aqui." id="nomeVagas">
+                        <input type="text" class="form_input" placeholder="Digite seu nome aqui." id="nomeVagas" name="nomeVagas">
                     </div>
 
                     <div class="form_div">
-                        <input type="email" class="form_input" placeholder="Digite seu email aqui." id="emailVagas">
+                        <input type="email" class="form_input" placeholder="Digite seu email aqui." id="emailVagas" name="EmailVagas">
                     </div>
 
                     <div class="form_div">
-                        <select id="musicaPedidos" class="form_input">
+                        <select id="RadioCargos" name="RadioCargos" class="form_input">
                             <option selected>Selecione um cargo</option>
-                            <option value="1">Rádio</option>
-                            <option value="2">Marketing</option>
+                            <option value="radio">Rádio</option>
+                            <option value="marketing">Marketing</option>
                         </select>
                     </div>
 

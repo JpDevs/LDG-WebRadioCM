@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Dez-2020 às 15:58
+-- Tempo de geração: 23-Dez-2020 às 06:24
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.2.31
 
@@ -37,8 +37,8 @@ CREATE TABLE `imagens` (
 --
 
 INSERT INTO `imagens` (`Id`, `Img_URL`) VALUES
-(0, 'http://localhost/img/600x100.png'),
-(1, 'http://localhost/img/200x550.png');
+(0, './img/IMAGEM 5.png'),
+(1, './img/IMAGEM 6.png');
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,9 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`ID`, `Nome`, `Email`, `Musica`) VALUES
-(0000000001, 'JohnDoe', 'jd@ldg.com.br', 'Pisadinha');
+(0000000001, 'JohnDoe', 'jd@ldg.com.br', 'Pisadinha'),
+(0000000002, 'João Doria', 'jpedrobraz@gmail.com', 'Musica'),
+(0000000008, 'João Pedro Braz Santos', 'contato@jpdevs.host', 'Musica');
 
 -- --------------------------------------------------------
 
@@ -98,7 +100,7 @@ CREATE TABLE `redes_sociais` (
 --
 
 INSERT INTO `redes_sociais` (`id`, `Instagram`, `Twitter`, `GooglePlay`) VALUES
-(0, 'https://instagram.com', 'https://twitter.com', 'https://play.google.com/');
+(0, 'https://instagram.com', 'radiolevel', 'https://play.google.com/');
 
 -- --------------------------------------------------------
 
@@ -158,7 +160,8 @@ CREATE TABLE `vagas` (
 --
 
 INSERT INTO `vagas` (`ID`, `Nome`, `Email`, `Area`) VALUES
-(0000000001, 'JohnDoe', 'jd@lgd.com.br', 'radio');
+(0000000001, 'JohnDoe', 'jd@lgd.com.br', 'radio'),
+(0000000004, 'João Pedro Braz Santos', 'contato@jpdevs.host', 'marketing');
 
 --
 -- Índices para tabelas despejadas
@@ -214,7 +217,7 @@ ALTER TABLE `vagas`
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `ID` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `radio_settings`
@@ -232,7 +235,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `vagas`
 --
 ALTER TABLE `vagas`
-  MODIFY `ID` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

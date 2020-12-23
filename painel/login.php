@@ -1,3 +1,6 @@
+<?php
+$test = "test";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
