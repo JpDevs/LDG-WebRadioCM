@@ -140,7 +140,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID`, `login`, `senha`) VALUES
-(01, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(01, 'admin', md5('admin'));
 
 -- --------------------------------------------------------
 

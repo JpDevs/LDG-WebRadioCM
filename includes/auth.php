@@ -1,6 +1,6 @@
 <?php
-    $host = 'localhost';
+    $host = 'localhost:3306';
     $bd = 'ldg';
     $usuario = 'root';
-    $senha = '';
+    $senha = '147896325@lvaro';
     ?>
