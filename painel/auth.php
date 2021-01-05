@@ -19,7 +19,7 @@ $senha = md5($_POST['senha']);
         die();
       }else{
         setcookie("login",$login);
-        header("Location:index.php");
+        header("Location:main.php");
       }
   }
 ?>

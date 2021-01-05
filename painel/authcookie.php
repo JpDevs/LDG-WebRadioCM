@@ -6,5 +6,6 @@ $login_cookie = $_COOKIE['login'];
       session_start();
     }else{
       header('Location: login.php');
+      die();
     }
     ?>
