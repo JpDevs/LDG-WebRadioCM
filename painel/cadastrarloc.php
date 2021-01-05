@@ -1,5 +1,6 @@
 <?php
 require('../includes/config.php');
+require('../includes/functions.php');
 require('authcookie.php');
 ?>
 <!DOCTYPE html>
@@ -25,18 +26,18 @@ require('authcookie.php');
             <h1>PAINEL</h1>
             <hr>
 
-            <form action="" method="post">
+            <form action="cadastralocutor.php" method="post">
                 <div id="configRadio" class="container">
                     <h3>Cadastrar Locutor</h3>
                     <hr>
                     <div class="labelInput">
                         <label for="linkPainelCentova">Nome:</label><br/>
-                        <input type="link" name="nome" id="linkPainelCentova" placeholder="">
+                        <input type="link" name="nome" id="locname" placeholder="">
                     </div>
 
                     <div class="labelInput">
                         <label for="loginCentova">Senha:</label><br/>
-                        <input type="text" name="senha" id="loginCentova" placeholder="">
+                        <input type="password" name="senha" id="locpass" placeholder="">
                     </div>
                 </div>
 

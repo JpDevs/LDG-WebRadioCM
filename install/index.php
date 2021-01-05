@@ -11,9 +11,9 @@
             <header><h1>Instalação</h1></header>
             <hr>
 			<center>
-            <form action="" method="POST">
+            <form action="installing.php" method="POST">
                 <div class="form_div">
-                    <input type="text" class="form_input" placeholder="DB-HOST" name="localhost">
+                    <input type="text" class="form_input" placeholder="DB-HOST" name="dbHost">
                 </div>
 
                 <div class="form_div">
@@ -28,7 +28,12 @@
                     <input type="text" class="form_input" placeholder="DB-NAME" name="nomeDB">
                 </div>
 
-                <button type="submit" class="form_button">Enviar</button>
+                <div class="form_div">
+                    <input type="text" class="form_input" placeholder="Chave de ativação" name="key">
+                </div>
+
+
+                <button type="submit" class="form_button" name="install">Enviar</button>
 				</center>
             </form>
         </main>

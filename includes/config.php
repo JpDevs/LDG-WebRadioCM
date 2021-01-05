@@ -8,5 +8,22 @@ if($mysqli->connect_errno) {
     header("Location:install");
 
 }
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,            "http://painel.jpdevs.host/verificador.php?key=".$key );
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
+curl_setopt($ch, CURLOPT_POST,           1 );
+curl_setopt($ch, CURLOPT_HTTPHEADER,     array('Content-Type: text/plain')); 
+$retorno=curl_exec ($ch);
+  //if($retorno == "inativa"){
+//	header('Location: https://painel.jpdevs.host/validador.php');
+	//die();
+//}
+ //elseif($retorno != "ativa"){
+//	echo $retorno;
+//	die();
+//}
+
+
 ?>
 

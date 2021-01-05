@@ -10,8 +10,8 @@
         <div id="app">
             <form action="auth.php" method="POST">
                 <h1>LOGIN</h1>
-                <input type="text" name="login" value="login" placeholder="Nome">
-                <input type="password" name="senha" value="senha" placeholder="Senha">
+                <input type="text" name="login"  placeholder="Nome">
+                <input type="password" name="senha"  placeholder="Senha">
                 <input type="submit" name="entrar" value="entrar" value="login">
             </form>
         </div>
