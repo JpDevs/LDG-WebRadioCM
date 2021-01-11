@@ -20,6 +20,22 @@ main{
     
 }
 
+table{
+    width: 100%;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 5px;
+}
+
+table th{
+    border: none;
+    border-bottom: 1px solid var(--cor-primaria);
+}
+
+table tr td{
+    border: none;
+    text-align: center;
+}
+
 #sideBar{
     height: 100%;
     width: 16rem;

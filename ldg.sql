@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Dez-2020 às 06:24
--- Versão do servidor: 10.4.13-MariaDB
--- versão do PHP: 7.2.31
+-- Tempo de geração: 12-Jan-2021 às 00:30
+-- Versão do servidor: 10.4.17-MariaDB
+-- versão do PHP: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `ldg`
+-- Banco de dados: `site1`
 --
 
 -- --------------------------------------------------------
@@ -43,11 +43,30 @@ INSERT INTO `imagens` (`Id`, `Img_URL`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `locutores`
+--
+
+CREATE TABLE `locutores` (
+  `ID` int(2) UNSIGNED ZEROFILL NOT NULL,
+  `login` varchar(30) DEFAULT NULL,
+  `senha` varchar(40) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `locutores`
+--
+
+INSERT INTO `locutores` (`ID`, `login`, `senha`) VALUES
+(01, 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `pedidos`
 --
 
 CREATE TABLE `pedidos` (
-  `ID` int(10) UNSIGNED ZEROFILL NOT NULL,
+  `ID` int(6) UNSIGNED ZEROFILL NOT NULL,
   `Nome` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Musica` varchar(255) NOT NULL
@@ -58,9 +77,7 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`ID`, `Nome`, `Email`, `Musica`) VALUES
-(0000000001, 'JohnDoe', 'jd@ldg.com.br', 'Pisadinha'),
-(0000000002, 'João Doria', 'jpedrobraz@gmail.com', 'Musica'),
-(0000000008, 'João Pedro Braz Santos', 'contato@jpdevs.host', 'Musica');
+(000001, 'JpDevs', 'contato@jpdevs.host', 'Toca Guns n roses - welcome to the jungle'),
 
 -- --------------------------------------------------------
 
@@ -140,7 +157,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID`, `login`, `senha`) VALUES
-(01, 'admin', md5('admin'));
+(01, 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -149,7 +166,7 @@ INSERT INTO `usuarios` (`ID`, `login`, `senha`) VALUES
 --
 
 CREATE TABLE `vagas` (
-  `ID` int(10) UNSIGNED ZEROFILL NOT NULL,
+  `ID` int(6) UNSIGNED ZEROFILL NOT NULL,
   `Nome` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Area` set('radio','marketing') NOT NULL
@@ -160,8 +177,7 @@ CREATE TABLE `vagas` (
 --
 
 INSERT INTO `vagas` (`ID`, `Nome`, `Email`, `Area`) VALUES
-(0000000001, 'JohnDoe', 'jd@lgd.com.br', 'radio'),
-(0000000004, 'João Pedro Braz Santos', 'contato@jpdevs.host', 'marketing');
+(000001, 'JpDevs', 'jd@lgd.com.br', 'radio'),
 
 --
 -- Índices para tabelas despejadas
@@ -172,6 +188,12 @@ INSERT INTO `vagas` (`ID`, `Nome`, `Email`, `Area`) VALUES
 --
 ALTER TABLE `imagens`
   ADD PRIMARY KEY (`Id`,`Img_URL`);
+
+--
+-- Índices para tabela `locutores`
+--
+ALTER TABLE `locutores`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Índices para tabela `pedidos`
@@ -214,10 +236,16 @@ ALTER TABLE `vagas`
 --
 
 --
+-- AUTO_INCREMENT de tabela `locutores`
+--
+ALTER TABLE `locutores`
+  MODIFY `ID` int(2) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `ID` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `radio_settings`
@@ -235,7 +263,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `vagas`
 --
 ALTER TABLE `vagas`
-  MODIFY `ID` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

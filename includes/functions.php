@@ -13,6 +13,9 @@ $consultaimg1 = "SELECT Img_URL FROM imagens WHERE id=0";
 $consultaimg2 = "SELECT Img_URL FROM imagens WHERE id=1";
 //redes sociais
 $consultatwitter = "SELECT Twitter FROM redes_sociais WHERE id=0";
+//pedidos e VAGAS
+$consultapedidos = "SELECT `ID`, `Nome`, `Email`, `Musica` FROM `pedidos` WHERE 1";
+$consultavagas = "SELECT `ID`, `Nome`, `Email`, `Area` FROM `vagas` WHERE 1";
 //---------------------------------------------------------------//
 //site_settings
 $contitulo = $mysqli->query($consultatitulo) or die ($mysqli->error);
@@ -28,3 +31,6 @@ $conimg1 = $mysqli->query($consultaimg1) or die ($mysqli->error);
 $conimg2 = $mysqli->query($consultaimg2) or die ($mysqli->error);
 //redes sociais
 $contt = $mysqli->query($consultatwitter) or die ($mysqli->error);
+//pedidos e VAGAS DE
+$conpedidos = $mysqli->query($consultapedidos) or die ($mysqli->error);
+$convagas = $mysqli->query($consultavagas) or die ($mysqli->error);

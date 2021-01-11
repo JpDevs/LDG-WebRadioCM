@@ -18,6 +18,7 @@ require('authcookie.php');
 
             <a href="./main.php">Início</a>
             <a href="./cadastrarloc.php">Cadastrar Loc.</a>
+            <a href="./vagas.php">Vagas</a>
             <a href="./ajustes.php">Configurações</a>
             <a href="./logout.php">Sair</a>
         </div>

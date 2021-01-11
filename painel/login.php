@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+require("../includes/config.php");
+?>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
@@ -10,7 +13,7 @@
         <div id="app">
             <form action="auth.php" method="POST">
                 <h1>LOGIN</h1>
-                <input type="text" name="login"  placeholder="Nome">
+                <input type="text" name="login"  placeholder="Usuário">
                 <input type="password" name="senha"  placeholder="Senha">
                 <input type="submit" name="entrar" value="entrar" value="login">
             </form>

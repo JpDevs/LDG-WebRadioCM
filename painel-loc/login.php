@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+require_once("../includes/config.php");
+?>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
@@ -8,11 +11,11 @@
     </head>
     <body style="background: url(../img/bg.png) no-repeat;">
         <div id="app">
-            <form action="" method="POST">
+            <form action="auth.php" method="POST">
                 <h1>LOGIN</h1>
-                <input type="text" name="" placeholder="Nome">
-                <input type="password" name="" placeholder="Senha">
-                <input type="submit" name="" value="login">
+                <input type="text" name="User" placeholder="Usuário">
+                <input type="password" name="Pass" placeholder="Senha">
+                <input type="submit" name="entrar" value="login">
             </form>
         </div>
     </body>
