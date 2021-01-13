@@ -32,12 +32,12 @@ require('authcookie.php');
                     <hr>
                     <div class="labelInput">
                         <label for="linkPainelCentova">Nome:</label><br/>
-                        <input type="link" name="nome" id="linkPainelCentova" placeholder="">
+                        <input type="link" name="nome" id="linkPainelCentova" value="<?php echo $login_cookie; ?>">
                     </div>
 
                     <div class="labelInput">
                         <label for="loginCentova">Senha:</label><br/>
-                        <input type="password" name="senha" id="loginCentova" placeholder="">
+                        <input type="password" name="senha" id="loginCentova" placeholder="Senha">
                     </div>
                 </div>
 
