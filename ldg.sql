@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Jan-2021 às 00:30
+-- Tempo de geração: 13-Jan-2021 às 15:04
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 7.4.13
 
@@ -52,13 +52,6 @@ CREATE TABLE `locutores` (
   `senha` varchar(40) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `locutores`
---
-
-INSERT INTO `locutores` (`ID`, `login`, `senha`) VALUES
-(01, 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-
 -- --------------------------------------------------------
 
 --
@@ -71,13 +64,6 @@ CREATE TABLE `pedidos` (
   `Email` varchar(255) NOT NULL,
   `Musica` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `pedidos`
---
-
-INSERT INTO `pedidos` (`ID`, `Nome`, `Email`, `Musica`) VALUES
-(000001, 'JpDevs', 'contato@jpdevs.host', 'Toca Guns n roses - welcome to the jungle'),
 
 -- --------------------------------------------------------
 
@@ -173,13 +159,6 @@ CREATE TABLE `vagas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `vagas`
---
-
-INSERT INTO `vagas` (`ID`, `Nome`, `Email`, `Area`) VALUES
-(000001, 'JpDevs', 'jd@lgd.com.br', 'radio'),
-
---
 -- Índices para tabelas despejadas
 --
 
@@ -239,13 +218,13 @@ ALTER TABLE `vagas`
 -- AUTO_INCREMENT de tabela `locutores`
 --
 ALTER TABLE `locutores`
-  MODIFY `ID` int(2) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(2) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `ID` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `radio_settings`
@@ -263,7 +242,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `vagas`
 --
 ALTER TABLE `vagas`
-  MODIFY `ID` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
