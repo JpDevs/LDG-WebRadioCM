@@ -72,7 +72,7 @@ body{
     margin-top: 1rem;
     display: grid;
     grid-template-columns:[colunaInicio] 70% [colunaFim]30%;
-    grid-template-rows: 15% auto;
+    grid-template-rows: 16% auto;
     box-shadow: 5px 0 10px black;
 }
 
@@ -131,6 +131,7 @@ body{
     border: none;
     outline: none;
     cursor: pointer;
+    margin: auto -10px auto auto;
 }
 
 #audioButtons button img{
@@ -181,4 +182,18 @@ body{
     top: 45%;
     right: 0;
     cursor: pointer;
+}
+
+#mobile{
+    display: none;
+}
+
+@media (max-width: 900px){
+    #desktop, #navbar{
+        display: none;
+    }
+
+    #mobile{
+        display: block;
+    }
 }

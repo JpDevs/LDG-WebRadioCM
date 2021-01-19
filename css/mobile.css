@@ -1,0 +1,66 @@
+/*Configuração principal das cores*/
+:root{
+    --cor-primaria: #1C1C29;
+    --cor-secundaria: #D9DE56;
+    --cor-terciaria: #f1f1f1;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--cor-terciaria);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#containerPlayer{
+    width: 90%;
+    background-color: var(--cor-secundaria);
+    border-radius: 1rem 1rem 0 0;
+    z-index: 1200;
+    box-shadow: 5px 0 10px black;
+    color: var(--cor-primaria);
+    padding: 5px;
+}
+
+#containerPlayer img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5px;
+    border: 3px solid var(--cor-terciaria);
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#containerPlayer span{
+    font-weight: bold;
+}
+
+#textBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 14rem;
+}
+
+#textBox a{
+    text-decoration: none;
+    color: var(--cor-primaria);
+    cursor: auto;
+}
+
+#audioButtons button{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: auto -10px auto auto;
+}
+
+#audioButtons button img{
+    width: 3rem;
+    height: 3rem;
+    border: none;
+}

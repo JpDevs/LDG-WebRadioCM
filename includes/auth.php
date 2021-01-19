@@ -1,8 +1,8 @@
 <?php
-    $host = 'localhost';
-    $bd = 'site1';
+    $host = 'localhost:3306';
+    $bd = 'new_ldg';
     $usuario = 'root';
-    $senha = '';
+    $senha = '147896325@lvaro';
     $key = '1234567';
     
     ?>
