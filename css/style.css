@@ -65,14 +65,14 @@ body{
 
 /*Main*/
 #app{
-    width: 50rem;
+    width: 65rem;
     height: 30rem;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     border-radius: 1rem;
     margin-top: 1rem;
     display: grid;
     grid-template-columns:[colunaInicio] 70% [colunaFim]30%;
-    grid-template-rows: 16% auto;
+    grid-template-rows: 20% auto;
     box-shadow: 5px 0 10px black;
 }
 
@@ -188,7 +188,7 @@ body{
     display: none;
 }
 
-@media (max-width: 900px){
+/*@media (max-width: 900px){
     #desktop, #navbar{
         display: none;
     }
@@ -196,4 +196,4 @@ body{
     #mobile{
         display: block;
     }
-}
+}*/
