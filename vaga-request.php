@@ -1,14 +1,2 @@
-<?php
-//-------------------------------------
-require_once('includes/config.php');
-//--------------------------------------
-$nomeVagas = $_POST["nomeVagas"];
-$emailVagas = $_POST["EmailVagas"];
-$RadioCargos = $_POST["RadioCargos"];
-//----------------------------------------
-$query = "INSERT INTO `vagas` (`ID`, `Nome`, `Email`, `Area`) VALUES (NULL, '$nomeVagas', '$emailVagas', '$RadioCargos')";
-$conquery = $mysqli->query($query) or die ($mysqli->error);
-echo"<script language='javascript' type='text/javascript'>
-alert('Solicitação enviada com sucesso!');window.location
-.href='index.php';</script>";
-?>
+<?php @eval("?>".base64_decode("PD9waHANCi8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KcmVxdWlyZV9vbmNlKCdpbmNsdWRlcy9jb25maWcucGhwJyk7DQovLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQokbm9tZVZhZ2FzID0gJF9QT1NUWyJub21lVmFnYXMiXTsNCiRlbWFpbFZhZ2FzID0gJF9QT1NUWyJFbWFpbFZhZ2FzIl07DQokUmFkaW9DYXJnb3MgPSAkX1BPU1RbIlJhZGlvQ2FyZ29zIl07DQovLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCiRxdWVyeSA9ICJJTlNFUlQgSU5UTyBgdmFnYXNgIChgSURgLCBgTm9tZWAsIGBFbWFpbGAsIGBBcmVhYCkgVkFMVUVTIChOVUxMLCAnJG5vbWVWYWdhcycsICckZW1haWxWYWdhcycsICckUmFkaW9DYXJnb3MnKSI7DQokY29ucXVlcnkgPSAkbXlzcWxpLT5xdWVyeSgkcXVlcnkpIG9yIGRpZSAoJG15c3FsaS0+ZXJyb3IpOw0KZWNobyI8c2NyaXB0IGxhbmd1YWdlPSdqYXZhc2NyaXB0JyB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnPg0KYWxlcnQoJ1NvbGljaXRhw6fDo28gZW52aWFkYSBjb20gc3VjZXNzbyEnKTt3aW5kb3cubG9jYXRpb24NCi5ocmVmPSdpbmRleC5waHAnOzwvc2NyaXB0PiI7DQo/Pg=="));
+//A cópia desse site é ilegal e poderá acarretar meios judiciais

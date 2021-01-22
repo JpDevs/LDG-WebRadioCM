@@ -1,7 +1,7 @@
 <?php
-    $host = 'localhost';
-    $bd = 'site1';
-    $usuario = 'root';
+    $host = '';
+    $bd = '';
+    $usuario = '';
     $senha = '';
-    $key = 'LDG-04XCVBGJ-56534-ZXCVBD';
+    $key = '';
     ?>

@@ -1,13 +1,2 @@
-<?php
-//-----------------------------------------//
-require_once('includes/config.php');
-//-----------------------------------------//
-$nomePedidos = $_POST['nomePedidos'];
-$emailPedidos = $_POST['emailPedidos'];
-$musicaPedidos = $_POST['musicaPedidos'];
-$query = "INSERT INTO `pedidos` (`ID`, `Nome`, `Email`, `Musica`) VALUES (NULL, '$nomePedidos', '$emailPedidos', '$musicaPedidos')";
-$conquery = $mysqli->query($query) or die ($mysqli->error);
-echo"<script language='javascript' type='text/javascript'>
-alert('Pedido enviado com sucesso!');window.location
-.href='index.php';</script>";
-?>
+<?php @eval("?>".base64_decode("PD9waHANCi8vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0vLw0KcmVxdWlyZV9vbmNlKCdpbmNsdWRlcy9jb25maWcucGhwJyk7DQovLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLy8NCiRub21lUGVkaWRvcyA9ICRfUE9TVFsnbm9tZVBlZGlkb3MnXTsNCiRlbWFpbFBlZGlkb3MgPSAkX1BPU1RbJ2VtYWlsUGVkaWRvcyddOw0KJG11c2ljYVBlZGlkb3MgPSAkX1BPU1RbJ211c2ljYVBlZGlkb3MnXTsNCiRxdWVyeSA9ICJJTlNFUlQgSU5UTyBgcGVkaWRvc2AgKGBJRGAsIGBOb21lYCwgYEVtYWlsYCwgYE11c2ljYWApIFZBTFVFUyAoTlVMTCwgJyRub21lUGVkaWRvcycsICckZW1haWxQZWRpZG9zJywgJyRtdXNpY2FQZWRpZG9zJykiOw0KJGNvbnF1ZXJ5ID0gJG15c3FsaS0+cXVlcnkoJHF1ZXJ5KSBvciBkaWUgKCRteXNxbGktPmVycm9yKTsNCmVjaG8iPHNjcmlwdCBsYW5ndWFnZT0namF2YXNjcmlwdCcgdHlwZT0ndGV4dC9qYXZhc2NyaXB0Jz4NCmFsZXJ0KCdQZWRpZG8gZW52aWFkbyBjb20gc3VjZXNzbyEnKTt3aW5kb3cubG9jYXRpb24NCi5ocmVmPSdpbmRleC5waHAnOzwvc2NyaXB0PiI7DQo/Pg=="));
+//A cópia desse site é ilegal e poderá acarretar meios judiciais

@@ -36,8 +36,6 @@ require_once("../includes/functions.php");
                     </tr>
                 </thead>
                 <tbody>
-                    <!--Cala a boca corno! kkkkkkkkkkkkkkkkkkkk-->
-                    <!--É UM WHILE SÓ CARALHO  -->
                     <?php
                     echo "<tr>";
                         while($exibepedidos = $conpedidos->fetch_assoc()) {
