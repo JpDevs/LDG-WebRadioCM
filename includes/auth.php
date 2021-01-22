@@ -1,8 +1,7 @@
 <?php
     $host = 'localhost';
-    $bd = 'WebRadioLdg';
+    $bd = 'site1';
     $usuario = 'root';
     $senha = '';
-    $key = '1234567';
-    
+    $key = '';
     ?>
