@@ -18,6 +18,7 @@ $centovalogin = $concclogin->fetch_assoc();
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
+    
     <body style="background: var(--cor-primaria) url('<?php while($showbg = $conbg->fetch_assoc()){ echo $showbg["background"];} ?>') no-repeat;">
     <img id="mobileLogo" src="<?php while($exibelogo = $conlogo->fetch_assoc()){ echo $exibelogo["logo"];}?>" alt="Rádio Level">
         <div id="containerPlayerMobile">
