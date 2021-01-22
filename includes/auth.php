@@ -3,5 +3,5 @@
     $bd = 'site1';
     $usuario = 'root';
     $senha = '';
-    $key = '';
+    $key = 'LDG-04XCVBGJ-56534-ZXCVBD';
     ?>
