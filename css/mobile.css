@@ -16,7 +16,6 @@ body{
 }
 
 #containerPlayerMobile{
-    width: 90%;
     height: 90%;
     background-color: var(--cor-secundaria);
     border-radius: 1rem 1rem 1rem 1rem;
