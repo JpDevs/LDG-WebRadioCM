@@ -1,7 +1,7 @@
 <?php
     $host = 'localhost';
-    $bd = 'heimeren_sitea';
-    $usuario = 'heimeren_sitea';
-    $senha = 'DLXjq)rUjQX!';
+    $bd = 'site1';
+    $usuario = 'root';
+    $senha = '';
     $key = 'LDG-04XCVBGJ-56534-ZXCVBD';
     ?>
