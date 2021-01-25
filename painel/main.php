@@ -1,5 +1,5 @@
 <?php
-require('../includes/config.php');
+require('cfg.php');
 require('../includes/functions.php');
 require('authcookie.php');
 ?>

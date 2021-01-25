@@ -1,5 +1,5 @@
 <?php
-require('../includes/config.php');
+require('cfg.php');
 require('authcookie.php');
 $nome = $_POST['nome'];
 $senha = MD5($_POST['senha']);

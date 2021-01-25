@@ -1,5 +1,4 @@
 <?php
-require_once('config.php');
 //tabela site_settings
 $consultatitulo =  "SELECT titulo FROM site_settings WHERE id=01";
 $consultalogo = "SELECT logo FROM site_settings WHERE id=01";

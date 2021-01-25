@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require("../includes/config.php");
+require('cfg.php');
 ?>
 <html lang="pt-br">
     <head>

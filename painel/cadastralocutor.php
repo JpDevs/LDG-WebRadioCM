@@ -1,5 +1,5 @@
 <?php
-require('../includes/config.php');
+require('cfg.php');
 $nome = $_POST['nome'];
 $senha = MD5($_POST['senha']);
 $addloc = "INSERT INTO `locutores` (`login`, `senha`) VALUES ('$nome', '$senha')";

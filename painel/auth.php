@@ -1,7 +1,7 @@
 <?php
 //https://jpdevs.host
 
-require('../includes/config.php');
+require('cfg.php');
 $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
@@ -11,7 +11,7 @@ $senha = md5($_POST['senha']);
     '$login' AND senha = '$senha'";
 
 
-    $verifica = mysqli_query($mysqli, $consultasq) or die("erro ao selecionar");
+    $verifica = mysqli_query($mysqli, $consultasq) or die($mysqli->error);
       if (mysqli_num_rows($verifica)<=0){
         echo"<script language='javascript' type='text/javascript'>
         alert('Login e/ou senha incorretos');window.location
