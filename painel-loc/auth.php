@@ -1,7 +1,7 @@
 <?php
 //https://jpdevs.host
 
-require('../includes/config.php');
+require('cfg.php');
 $login = $_POST['User'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['Pass']);
@@ -18,7 +18,7 @@ $senha = md5($_POST['Pass']);
         .href='login.php';</script>";
         die();
       }else{
-        setcookie("login",$login);
+        setcookie("EB$567424Lc",$login);
         header("Location:main.php");
       }
   }

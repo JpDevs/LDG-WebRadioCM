@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 require_once("authcookie.php");
-require_once("../includes/config.php");
+require_once("cfg.php");
 require_once("../includes/functions.php");
 ?>
 <html lang="pt-br">
