@@ -10,5 +10,7 @@ Acesse a index da aplicação, e você será redirecionado para a página de ins
 ## Contribuidores
 Essa aplicação está sendo desenvolvida pela Level Development Group, os desenvolvedores responsáveis são:
 
-JpDevs: Responsável pelo back-end e banco de dados.
-Alvaro Eduardo: Responsável pelo front-end.
+### JpDevs: 
+Responsável pelo back-end e banco de dados.
+### Alvaro Eduardo: 
+Responsável pelo front-end.
