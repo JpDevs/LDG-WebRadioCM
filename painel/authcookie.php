@@ -1,7 +1,7 @@
 
 <?php
 //JpDevs
-$login_cookie = $_COOKIE['0d15c4519c54d461d4456a9f0a6a2c45'];
+$login_cookie = $_COOKIE['3ceb2b1874575fb8e58579ef612f053f'];
     if(isset($login_cookie)){
       session_start();
     }else{

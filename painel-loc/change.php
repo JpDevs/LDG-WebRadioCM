@@ -1,5 +1,5 @@
 <?php
-require("cfg.php");
+require("cfg2.php");
 require("authcookie.php");
 $senha = md5($_POST['senha']);
 $querymuda = "UPDATE `locutores` SET `senha` = '$senha' WHERE login = '$login_cookie'";

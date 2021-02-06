@@ -1,11 +1,13 @@
 <?php
 //https://jpdevs.host
+
 require('cfg.php');
 $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
-$autoriza = md5($login);
-$ncookie = md5("CookieLoginJpDevs");
+$autoriza = md5("cookiejpdevs");
+
+
   if (isset($entrar)) {
 
     $consultasq = "SELECT * FROM usuarios WHERE login =
@@ -19,7 +21,7 @@ $ncookie = md5("CookieLoginJpDevs");
         .href='login.php';</script>";
         die();
       }else{
-        setcookie($ncookie,$login);
+        setcookie($autoriza,$login);
         header("Location:main.php");
       }
   }

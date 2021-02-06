@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 require_once("authcookie.php");
-require_once("cfg.php");
+require_once("./cfg2.php");
 require_once("../includes/functions.php");
 ?>
 <html lang="pt-br">
@@ -24,7 +24,7 @@ require_once("../includes/functions.php");
         <main>
             <h1>Painel</h1>
             <hr>
-
+            <h4>Pedidos</h4>
             <!--TABELA DE PEDIDOS-->
             <table border="3">
                 <thead>

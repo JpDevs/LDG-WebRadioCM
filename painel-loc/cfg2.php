@@ -1,5 +1,5 @@
 <?php
-require_once('cfg.php');
+include('../includes/auth.php');
 $mysqli = new mysqli($host, $usuario, $senha, $bd);
 $mysqli -> set_charset("utf8");
 if($mysqli->connect_errno) {

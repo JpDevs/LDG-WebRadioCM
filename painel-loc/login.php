@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require_once("cfg.php");
+require('cfg2.php');
 ?>
 <html lang="pt-br">
     <head>

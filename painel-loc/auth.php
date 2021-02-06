@@ -4,6 +4,7 @@
 require('cfg.php');
 $login = $_POST['User'];
 $entrar = $_POST['entrar'];
+$cookiel = md5("cookiejpdevslocpan");
 $senha = md5($_POST['Pass']);
   if (isset($entrar)) {
 
@@ -18,7 +19,7 @@ $senha = md5($_POST['Pass']);
         .href='login.php';</script>";
         die();
       }else{
-        setcookie("EB$567424Lc",$login);
+        setcookie('3e211765d7a83cade48a03123a2c0f0c',$login);
         header("Location:main.php");
       }
   }
